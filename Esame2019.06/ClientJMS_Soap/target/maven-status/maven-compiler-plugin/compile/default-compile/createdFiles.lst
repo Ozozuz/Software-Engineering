@@ -1,0 +1,9 @@
+edu\uniroma1\msecs\soapserver\GetDetails.class
+edu\uniroma1\msecs\soapserver\ExamImplService.class
+edu\uniroma1\msecs\soapserver\Professor.class
+edu\uniroma1\msecs\soapserver\ObjectFactory.class
+com\mycompany\clientjms_soap\myListener.class
+edu\uniroma1\msecs\soapserver\Exam.class
+com\mycompany\clientjms_soap\Client.class
+edu\uniroma1\msecs\soapserver\package-info.class
+edu\uniroma1\msecs\soapserver\GetDetailsResponse.class

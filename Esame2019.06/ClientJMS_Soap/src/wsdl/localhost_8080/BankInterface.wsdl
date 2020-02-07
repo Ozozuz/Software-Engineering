@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://bankws.mycompany.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="BankImplService" targetNamespace="http://bankws.mycompany.com/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://bankws.mycompany.com/" elementFormDefault="unqualified" targetNamespace="http://bankws.mycompany.com/" version="1.0">
+
+  <xs:element name="getOperationDetailsByID" type="tns:getOperationDetailsByID"/>
+
+  <xs:element name="getOperationDetailsByIDResponse" type="tns:getOperationDetailsByIDResponse"/>
+
+  <xs:element name="getOperationsByClientID" type="tns:getOperationsByClientID"/>
+
+  <xs:element name="getOperationsByClientIDResponse" type="tns:getOperationsByClientIDResponse"/>
+
+  <xs:complexType name="getOperationsByClientID">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getOperationsByClientIDResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getOperationDetailsByID">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getOperationDetailsByIDResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getOperationsByClientID">
+    <wsdl:part element="tns:getOperationsByClientID" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOperationsByClientIDResponse">
+    <wsdl:part element="tns:getOperationsByClientIDResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOperationDetailsByID">
+    <wsdl:part element="tns:getOperationDetailsByID" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOperationDetailsByIDResponse">
+    <wsdl:part element="tns:getOperationDetailsByIDResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="BankIFace">
+    <wsdl:operation name="getOperationsByClientID">
+      <wsdl:input message="tns:getOperationsByClientID" name="getOperationsByClientID">
+    </wsdl:input>
+      <wsdl:output message="tns:getOperationsByClientIDResponse" name="getOperationsByClientIDResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOperationDetailsByID">
+      <wsdl:input message="tns:getOperationDetailsByID" name="getOperationDetailsByID">
+    </wsdl:input>
+      <wsdl:output message="tns:getOperationDetailsByIDResponse" name="getOperationDetailsByIDResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BankImplServiceSoapBinding" type="tns:BankIFace">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getOperationsByClientID">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getOperationsByClientID">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getOperationsByClientIDResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOperationDetailsByID">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getOperationDetailsByID">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getOperationDetailsByIDResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BankImplService">
+    <wsdl:port binding="tns:BankImplServiceSoapBinding" name="BankImplPort">
+      <soap:address location="http://localhost:8080/BankInterface"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

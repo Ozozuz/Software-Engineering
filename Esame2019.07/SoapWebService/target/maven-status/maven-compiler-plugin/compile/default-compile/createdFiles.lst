@@ -1,0 +1,5 @@
+com\mycompany\soapwebservice\CinemaImpl.class
+com\mycompany\soapwebservice\CinemaInterface.class
+com\mycompany\soapwebservice\Movie.class
+com\mycompany\soapwebservice\Server.class
+com\mycompany\soapwebservice\Director.class

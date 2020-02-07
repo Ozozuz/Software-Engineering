@@ -1,0 +1,4 @@
+edu\uniroma1\msecs\soapserver\Server.class
+edu\uniroma1\msecs\soapserver\ExamImpl.class
+edu\uniroma1\msecs\soapserver\Professor.class
+edu\uniroma1\msecs\soapserver\Exam.class

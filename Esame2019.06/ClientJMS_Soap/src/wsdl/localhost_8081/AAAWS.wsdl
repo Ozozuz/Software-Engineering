@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://webservice.aaaws.mycompany.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="AAAWSImplService" targetNamespace="http://webservice.aaaws.mycompany.com/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://webservice.aaaws.mycompany.com/" elementFormDefault="unqualified" targetNamespace="http://webservice.aaaws.mycompany.com/" version="1.0">
+
+  <xs:element name="addClient" type="tns:addClient"/>
+
+  <xs:element name="addClientResponse" type="tns:addClientResponse"/>
+
+  <xs:element name="getClients" type="tns:getClients"/>
+
+  <xs:element name="getClientsResponse" type="tns:getClientsResponse"/>
+
+  <xs:complexType name="getClients">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getClientsResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addClient">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addClientResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="addClientResponse">
+    <wsdl:part element="tns:addClientResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addClient">
+    <wsdl:part element="tns:addClient" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getClients">
+    <wsdl:part element="tns:getClients" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getClientsResponse">
+    <wsdl:part element="tns:getClientsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="AAAWSInterface">
+    <wsdl:operation name="getClients">
+      <wsdl:input message="tns:getClients" name="getClients">
+    </wsdl:input>
+      <wsdl:output message="tns:getClientsResponse" name="getClientsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addClient">
+      <wsdl:input message="tns:addClient" name="addClient">
+    </wsdl:input>
+      <wsdl:output message="tns:addClientResponse" name="addClientResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AAAWSImplServiceSoapBinding" type="tns:AAAWSInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getClients">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getClients">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getClientsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addClient">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="addClient">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addClientResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AAAWSImplService">
+    <wsdl:port binding="tns:AAAWSImplServiceSoapBinding" name="AAAWSImplPort">
+      <soap:address location="http://localhost:8081/AAAWS"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

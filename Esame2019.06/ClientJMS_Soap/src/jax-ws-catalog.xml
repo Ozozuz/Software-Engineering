@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/BankInterface?wsdl" uri="wsdl/localhost_8080/BankInterface.wsdl"/>
+    <system systemId="http://localhost:8081/AAAWS?wsdl" uri="wsdl/localhost_8081/AAAWS.wsdl"/>
+    <system systemId="http://localhost:8080/ProfessorManagement?wsdl" uri="wsdl/localhost_8080/ProfessorManagement.wsdl"/>
+</catalog>

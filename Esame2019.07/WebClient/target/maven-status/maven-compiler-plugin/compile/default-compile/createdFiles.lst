@@ -1,0 +1,15 @@
+com\mycompany\soapwebservice\GetDirector.class
+com\mycompany\soapwebservice\GetMoviesResponse.class
+com\mycompany\soapwebservice\GetMovies.class
+com\mycompany\soapwebservice\GetMovieResponse.class
+com\mycompany\soapwebservice\package-info.class
+com\mycompany\soapwebservice\Movie.class
+com\mycompany\soapwebservice\CinemaImplService.class
+com\mycompany\soapwebservice\ObjectFactory.class
+com\mycompany\soapwebservice\AddDirectorResponse.class
+com\mycompany\soapwebservice\Director.class
+com\mycompany\soapwebservice\AddDirector.class
+com\mycompany\soapwebservice\CinemaInterface.class
+com\mycompany\soapwebservice\GetDirectorResponse.class
+com\mycompany\soapwebservice\GetMovie.class
+com\mycompany\webclient\Client.class
