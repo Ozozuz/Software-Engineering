@@ -20,11 +20,10 @@ Other usefull Repos
 
         https://github.com/nicoDs96/SE-LABs
         
-       
-    Exams and Exercises
+   Exams and Exercises
     
-      https://github.com/aserpi/msecs-1-se
+        https://github.com/aserpi/msecs-1-se
 
-      https://github.com/nicoDs96/exam
+        https://github.com/nicoDs96/exam
 
 
