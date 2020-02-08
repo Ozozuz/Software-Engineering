@@ -1,0 +1,1 @@
+It is necessary to generate the web clint stub (the WSDL file is located at http://localhost:8080/ProfessorManagement?wsdl) before building the project.
